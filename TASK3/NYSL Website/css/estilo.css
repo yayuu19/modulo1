@@ -59,7 +59,7 @@ header>h1 {
     background-color: #033949;
     width: 100%;
 }
-
+ 
 nav {
     display: flex;
     flex-direction: row;
@@ -123,18 +123,13 @@ main {
     margin: 50px;
 }
 
-/* #about {
-    display: grid;
-    grid-template-rows: repeat(3, 200px);
-    grid-template-columns: 1;
-    padding: 50px 0;
-} */
-
 #about>article {
-    width: 95%;
     padding: 50px;
-    margin: 10px;
 }
+
+#about>article:nth-child(odd) {
+    background-color: #033949;
+} 
 
 #rules>dl {
     padding: 50px;
@@ -171,11 +166,8 @@ main p {
     padding: 8px;
 }
 
-#about>article:nth-child(odd) {
-    background-color: #033949;
-}
 
-#schedule {
+#schedule, #about {
     margin: 50px;
     padding: 50px;
 } 
@@ -216,8 +208,7 @@ color: var(--text-color);
     grid-template-columns: repeat(3, 400px);
     grid-template-rows: repeat(3, 400px);
     align-items: center;
-    grid-column-gap: 10px;
-    grid-row-gap: 30px;
+    grid-gap: 10px;
 }
 
 #gallery img {
@@ -228,7 +219,82 @@ color: var(--text-color);
 
 /* modal */
 
-
+/*MODAL*/
+#show-modal {
+    background-color: rgba(0,0,0,.8);
+    border-radius: 3.5px;
+    transition: all 0.15s linear;
+ }
+    
+ .modal {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    z-index: 99999999;
+    background-color: rgba(0,0,0,.8);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+ }
+    
+ .modal .content-modal {
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    left: 50%;
+    top: -100vh;
+    transition: top 0.35s ease;
+    margin-left: -250px;
+    background: white;
+    box-shadow: 0 1px wpx rgba(0,0,0,0.1);
+    z-index: 9999999;
+    border-radius: 20px;
+ }
+ 
+ .modal .imagen {
+     display: flex;
+     justify-content: center;
+ }
+    
+ .close-modal {
+    color: var(--primary-color);
+    position: absolute;
+    top: 0.2em;
+    right: 0.375em;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size:1.5em;
+    text-decoration: none;
+ }
+    
+ .modal:target {
+    opacity: 1;
+    top: 0;
+ }
+    
+ .modal .btn-close-modal {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999991;
+ }
+    
+ .modal:target .content-modal {
+    top: 50px;
+    transition: top 0.35s ease;
+ }
+    
+ @media (max-width: 500px) {
+    .modal .content-modal {
+     width:90%;
+    max-width: none;
+    left: 5%;
+    margin-left: 0;
+    }
+ }
 
 /* estilos del footer */
 
@@ -242,8 +308,4 @@ footer {
 footer>a {
     margin: 0 30px;
     color: var(--text-color);
-}
-
-.grid-container>* {
-    border: black solid 2px;
 }
