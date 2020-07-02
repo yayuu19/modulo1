@@ -1,0 +1,183 @@
+/*Estilos generales*/
+
+:root{
+    --primary-color: #033949;
+    --secondary-color: #a3ff15;
+}
+
+*{
+    margin: 0;
+}
+
+img{
+    width: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "navbar navbar"
+    "main aside"
+    "footer footer";
+}
+
+
+
+/*Estilos del header*/
+
+header{
+    grid-area: header;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    height: 30vh;
+    text-align: center;
+}
+
+#logo{
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+}
+
+h1{
+    position: relative;
+    z-index: 2;
+    font-size: 250%;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px #fff;
+}
+
+/*Estilos del navbar*/
+
+.navbar{
+    grid-area: navbar;
+    height: 15vh;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+
+}
+
+nav>a{
+    width: 10%;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>.active, nav>a:hover{
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+.navbar h2{
+    height: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15%;
+    border-radius: 0 25px 25px 0;
+}
+
+/*Estilos del main*/
+main{
+    grid-area: main;
+    display: flex;
+    direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 50px 0;
+}
+
+main>article{
+    width: 300px;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    margin: 20px 10px;
+    padding: 10px;
+    
+}
+
+/*Estilos del aside*/
+aside{
+    grid-area: aside;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside>section{
+    display: contents;
+}
+
+aside article{
+    width: 95%;
+}
+
+
+
+aside h4{
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    color: black;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+aside article>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+aside article:nth-child(2n)>div{
+    flex-direction: row-reverse;
+}
+
+
+
+aside p{
+    margin: 0 10px;
+}
+
+/*Estilos del footer*/
+footer{
+    grid-area: footer;
+    background-color: var(--primary-color);
+    font-size: 170%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer>a{
+    margin: 0 30px;
+    color: var(--secondary-color);
+}

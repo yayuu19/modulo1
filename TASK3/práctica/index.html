@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table> 
+        <!-- dos filas con una celda -->
+        <tr>  <!-- fila -->
+            <th>number</th>  <!-- titulo de celda -->
+        </tr>
+        <tr>
+            <td>1</td> <!-- celda común -->
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th rowspan="2">precio</th>
+            <th rowspan="2">cantidad</th>
+            <th rowspan="2">descuento</th>
+            <th colspan="2">total</th>
+        </tr>
+        <tr>
+            <td>Bruto</td>
+            <td>Neto</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+</body>
+</html>

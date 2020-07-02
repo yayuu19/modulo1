@@ -1,0 +1,86 @@
+* { 
+    font-family: sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block;
+    height: 250px;
+    padding-left: 10px;
+    font-size: 25px;
+    font-style: italic;
+    color: black;
+    background-image: url(../img/design2_image1.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+}
+
+header>h2 {
+    display: block;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    border: solid black;
+    position: absolute;
+    width: 100%;
+    bottom: 330px;
+    right: 0;
+}
+
+header>h1 {
+    background: transparent;
+}
+
+
+#logo {
+    float: left;
+    width: 10%;
+    margin: 60px;
+    background: transparent;
+}
+
+main {
+    float: left;
+    width: 70%;
+    margin: 40px;
+    padding: 25px;
+}
+
+nav {
+    position: absolute;
+    top: 75px;
+    right: 60px;
+    background: transparent;
+}
+
+nav>a#oculto {display: none;}
+
+nav>a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 8px;
+    border: solid black 2px;
+    box-shadow: 0 12px 16px 0  black;
+}
+
+nav>a#oculto {display: none;}
+
+#color {
+    background-color: green;
+}
+
+main>h3, main>p {
+    padding: 4px;
+}
+
+main>p { padding: 10px;}

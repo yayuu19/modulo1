@@ -1,0 +1,29 @@
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  th,
+  td {
+    padding: 10px 15px;
+  }
+  thead {
+    color: #fff;
+   }
+
+  tbody tr:nth-child(n) {
+      background: #2E8B57;
+      color: #fff;
+  }
+  tbody tr:nth-child(2n) {
+    background: #033949;
+    color: #fff;
+  }
+
+  /* td {
+    border-bottom: 1px solid #033949;
+    border-right: 1px solid #033949;
+  }
+  td:first-child {
+    border-left: 1px solid #033949;
+  }
+   */

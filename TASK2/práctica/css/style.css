@@ -1,0 +1,277 @@
+/*Estilos generales*/
+:root {
+    --primary-color: #033949;
+    --secondary-color: #a3ff15;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    width: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "navbar navbar"
+    "main aside"
+    "footer footer";
+}
+
+ /*llama a todos los hijos directos de container*/
+
+/*Estilos del header*/
+
+header { 
+    grid-area: header;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    height: 30vh;
+    text-align: center;
+}
+
+#logo {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50px;
+    width: 150px;
+}
+
+h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 300%;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px #fff;
+}
+
+/*Estilos del navbar*/
+
+.navbar { 
+    grid-area: navbar;
+    height: 15vh;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+nav>a {
+    width: 10%;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav>.active, nav>a:hover {
+    color: black;
+    background-color: var(--secondary-color);
+}
+
+.navbar h2 {
+    height: 50%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    margin-right: 15%;
+    border-radius: 0 20px 20px 0;
+}
+
+/*Estilos del main*/
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+}
+
+#about {
+    direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#about>article {
+    width: 300px;
+    border: solid 3px var(--primary-color);
+    border-radius: 20px;
+    margin: 20px 10px;
+    padding: 10px;
+}
+
+#gallery>.grid-container {
+    grid-template-areas: none;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(4,200px);
+    grid-gap: 20px;
+    align-items: center;
+}
+
+#gallery img {
+    width: 100%;
+    border: solid 4px var(--primary-color);
+    border-radius: 15px;
+}
+
+/*MODAL*/
+#show-modal {
+   background-color: rgba(0,0,0,.8);
+   border-radius: 3.5px;
+   transition: all 0.15s linear;
+}
+   
+.modal {
+   position: fixed;
+   top: -100vh;
+   left: 0;
+   z-index: 99999999;
+   background-color: rgba(0,0,0,.8);
+   width: 100vw;
+   height: 100vh;
+   opacity: 0;
+   transition: opacity 0.35s ease;
+}
+   
+.modal .content-modal {
+   width: 100%;
+   max-width: 500px;
+   position: fixed;
+   left: 50%;
+   top: -100vh;
+   transition: top 0.35s ease;
+   margin-left: -250px;
+   background: white;
+   box-shadow: 0 1px wpx rgba(0,0,0,0.1);
+   z-index: 9999999;
+   border-radius: 20px;
+}
+
+.modal .imagen {
+    display: flex;
+    justify-content: center;
+}
+   
+.close-modal {
+   color: var(--primary-color);
+   position: absolute;
+   top: 0.2em;
+   right: 0.375em;
+   margin: 0;
+   padding: 5px;
+   font-weight: bold;
+   font-size:1.5em;
+   text-decoration: none;
+}
+   
+.modal:target {
+   opacity: 1;
+   top: 0;
+}
+   
+.modal .btn-close-modal {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 999999991;
+}
+   
+.modal:target .content-modal {
+   top: 50px;
+   transition: top 0.35s ease;
+}
+   
+@media (max-width: 500px) {
+   .modal .content-modal {
+    width:90%;
+   max-width: none;
+   left: 5%;
+   margin-left: 0;
+   }
+}
+
+
+/*Estilos del aside*/
+aside { 
+    grid-area: aside;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*cuando estoy en columnas y quiero centrar, es preferible usar align-items*/
+}
+
+aside>section {
+    display: contents;
+}
+
+aside article {
+    width: 95%;
+}
+
+aside h4 {
+    color: black;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+aside article>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+aside article:nth-child(2)>div {
+    flex-direction: row-reverse;
+}
+
+/*aside article:nth-child(2n)>div  
+llama a todos los pares
+*/
+
+aside p {
+    margin: 0 10px;
+}
+
+/*Estilos del footer*/
+footer {
+    grid-area: footer;
+    background-color: var(--primary-color);
+    font-size: 170%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer>a {
+    margin: 0 30px;
+    color: var(--secondary-color);
+}
