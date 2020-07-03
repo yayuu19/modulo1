@@ -50,6 +50,7 @@ article {
   border: 1px solid black;
   margin-bottom: 2em;
   padding: 10px;
+  align-content: center;
 }
 
 /* ESTILOS DE FOOTER */

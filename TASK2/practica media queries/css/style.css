@@ -1,0 +1,99 @@
+/* ESTILOS GENERALES */
+:root {
+    --primary-color: #fd7e14;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url("../img/topography.svg");
+  }
+  /* ESTILOS DE HEADER */
+  header {
+    height: 15vh;
+    align-items: center;
+  }
+  
+  header > img {
+    max-height: 75px;
+    margin-right: 2em;
+  }
+  
+  header,
+  footer {
+    background-color: var(--primary-color);
+    color: whitesmoke;
+  }
+  
+  /* ESTILOS DE MAIN */
+  
+  main {
+    justify-content: center;
+    padding: 15px 0;
+  }
+  
+  #container {
+    background-color: #fd7d1471;
+    padding: 15px;
+    max-width: 90%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  article {
+    border: 1px solid black;
+    margin-bottom: 2em;
+    padding: 10px;
+    align-content: center;
+  }
+  
+  /* ESTILOS DE FOOTER */
+  
+  footer {
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: larger;
+  }
+  
+  /* CLASES CUSTOM */
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .d-none {
+    display: none;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  /* REGLAS PARA PANTALLAS PEQUEÑAS (SMALL) */
+  @media (min-width: 600px) {
+    .d-sm-inline {
+      display: inline;
+    }
+  
+    .d-sm-none {
+      display: none;
+    }
+  }
+  
+  /* REGLAS PARA PANTALLAS MEDIANAS (MEDIUM) */
+  
+  @media (min-width: 768px) {
+    .d-md-inline {
+      display: inline;
+    }
+  }
