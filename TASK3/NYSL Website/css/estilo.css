@@ -38,15 +38,13 @@ header {
     background-size: cover;
     color: #fff;
     background-color: #fff;
-    min-height: 40vh;
+    min-height: 60vh;
     position: static;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 h1 {
-    display: flex;
     justify-content: center;
     text-align: center;
     background-color: #033949;
@@ -58,7 +56,6 @@ h1 {
 h2 {
     font-size: 35px;
     color: #f0f0f0;
-    display: flex;
     justify-content: center;
     background-color: #033949;
 }
@@ -74,7 +71,6 @@ h2 {
 }
  
 nav {
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -86,8 +82,8 @@ nav>a {
     color: #f0f0f0;;
     font-weight: bold;
     height: 100%;
-    display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
 }
 
@@ -141,7 +137,6 @@ main p {
 }
 
 #schedule .table {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -171,10 +166,11 @@ dl>dt, dl>dd {
 #rules ul, #rules ol, #rules li {
     padding: 7px;
 }
-/* 
+
 caption {
     padding: 15px;
-} */
+    text-align: left;
+}
 
 table {
     border-collapse: separate;
@@ -212,7 +208,6 @@ color: var(--text-color);
 
 /* modal */
 
-/*MODAL*/
 #show-modal {
     background-color: rgba(0,0,0,.8);
     border-radius: 3.5px;
@@ -233,9 +228,9 @@ color: var(--text-color);
     
  .modal .content-modal {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     position: fixed;
-    left: 50%;
+    left: 45%;
     top: -100vh;
     transition: top 0.35s ease;
     margin-left: -250px;
@@ -245,7 +240,8 @@ color: var(--text-color);
     border-radius: 20px;
  }
  
- .modal .imagen {
+
+ .modal img {
      display: flex;
      justify-content: center;
  }
@@ -292,6 +288,12 @@ footer {
 footer>a {
     margin: 0 30px;
     color: var(--text-color);
+}
+
+/* clases */
+
+.d-flex {
+    display: flex;
 }
 
 /* media */
