@@ -21,7 +21,6 @@ body {
     grid-template-areas:
     "navbar"
     "header"
-    "subtitle"
     "main"
     "footer"
     ;
@@ -41,15 +40,29 @@ header {
     background-color: #fff;
     min-height: 40vh;
     position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-header>h1 {
+h1 {
     display: flex;
     justify-content: center;
+    text-align: center;
     background-color: #033949;
     text-transform: uppercase;
     font-size: 65px;
 }
+
+
+h2 {
+    font-size: 35px;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    background-color: #033949;
+}
+
 
 /* estilos del navbar */
 
@@ -100,43 +113,49 @@ nav>a {
     left: 10px;
 }
 
-/* estilos del subtitle */
-
-.subtitle {
-    grid-area: subtitle;
-    display: flex;
-    justify-content: center;
-    background-color: #033949;
-}
-
-h2 {
-    font-size: 35px;
-    color: #f0f0f0;
-}
-
 /* estilos del main */
 
 main {
     grid-area: main;
-    padding: 8px;
-    color: #f0f0f0;
     margin: 50px;
+    padding: 10px;
+    color: #f0f0f0;
 }
 
-#about>article {
+main p {
+    padding: 8px;
+}
+
+#index>p:nth-child(even) {
+    background-color: #033949;;
+}
+
+#index>h3 {
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+#schedule, #about, #rules{
+    margin: 50px;
+    padding: 50px;
+}
+
+#schedule .table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+#about>article, #rules dl {
     padding: 50px;
 }
 
 #about>article:nth-child(odd) {
     background-color: #033949;
-} 
-
-#rules>dl {
-    padding: 50px;
-    margin: 10px;
 }
 
-#rules>dl:nth-child(even) {
+#rules dl:nth-child(even) {
     background-color: #033949;
 }
 
@@ -152,36 +171,10 @@ dl>dt, dl>dd {
 #rules ul, #rules ol, #rules li {
     padding: 7px;
 }
-
-#index>p:nth-child(even) {
-    background-color: #033949;;
-}
-
-#index>h3 { 
-    text-transform: uppercase;
-    margin: 10px;
-}
-
-main p {
-    padding: 8px;
-}
-
-
-#schedule, #about {
-    margin: 50px;
-    padding: 50px;
-} 
-
-#schedule>.table {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
+/* 
 caption {
     padding: 15px;
-    text-align: left;
-}
+} */
 
 table {
     border-collapse: separate;
@@ -192,7 +185,7 @@ table {
 th, td {
     padding: 10px 15px;
 }
-  
+
 tbody tr:nth-child(odd) {
     background: #2E8B57;
     color: var(--text-color);
@@ -258,7 +251,7 @@ color: var(--text-color);
  }
     
  .close-modal {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     position: absolute;
     top: 0.2em;
     right: 0.375em;
@@ -287,15 +280,6 @@ color: var(--text-color);
     transition: top 0.35s ease;
  }
     
- @media (max-width: 500px) {
-    .modal .content-modal {
-     width:90%;
-    max-width: none;
-    left: 5%;
-    margin-left: 0;
-    }
- }
-
 /* estilos del footer */
 
 footer {
@@ -309,3 +293,14 @@ footer>a {
     margin: 0 30px;
     color: var(--text-color);
 }
+
+/* media */
+
+@media (max-width: 500px) {
+    .modal .content-modal {
+     width:90%;
+    max-width: none;
+    left: 5%;
+    margin-left: 0;
+    }
+ }
