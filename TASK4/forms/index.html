@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <main id="register">
+        <!-- method del tipo get pa obtener, del tipo post para mandar datos -->
+        <form action="show-data.html">
+            <fieldset>
+                <legend>Personal Info</legend>
+                <label for="first-name">First Name:
+                    <input type="text" placeholder="John" name="first-name" id="first-name">
+                </label>
+                <label for="last-name">Last Name:
+                    <input type="text" placeholder="Smith" name="last-name" id="last-name">
+                </label>
+                <label for="">Age:
+                    <input type="number" name="age">
+                </label>
+                <label for="birth-date">Birth Date:
+                    <input type="date" name="birth-date" id="birth-date">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Female
+                    <input type="radio" name="gender" value="female">
+                </label>
+                <label>Male
+                    <input type="radio" name="gender" value="male">
+                </label>
+                <label>Non Binary
+                    <input type="radio" name="gender" value="non-binary">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Read
+                    <input type="checkbox" name="hobbies" value="read">
+                </label>
+                <label>Running
+                    <input type="checkbox" name="hobbies" value="running">
+                </label>
+                <label>Listen to music
+                    <input type="checkbox" name="hobbies" value="listen-music">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="province">Province:</label>
+                <select name="province" id="province">
+                    <option value="CABA">CABA</option>
+                    <option value="buenos-aires">Buenos Aires</option>
+                    <option value="cordoba">Córdoba</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Send">
+            <!-- <input type="phone" name="phone"> -->
+
+        </form>
+    </main>
+</body>
+</html>
