@@ -141,7 +141,6 @@ main p {
     flex-wrap: wrap;
 }
 
-
 #about>article, #rules dl {
     padding: 50px;
 }
@@ -190,6 +189,12 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
 background: #033949;
 color: var(--text-color);
+}
+
+iframe {
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
 }
 
 #gallery .grid-container {
